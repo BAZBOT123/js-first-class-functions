@@ -2,7 +2,7 @@ const f = require('../src/arrays')
 
 describe("Arrays", () => {
   
-  it("findFirstNumberGreaterThan10", () => {
+it("findFirstNumberGreaterThan10", () => {
     expect(f.findFirstNumberGreaterThan10()).toEqual(76)
   })
 
