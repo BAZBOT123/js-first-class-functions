@@ -4,9 +4,7 @@ const { ConsoleReporter } = require("jasmine")
 function findFirstNumberGreaterThan10() {
   const nums = [5, 2, 1, 76, 12]
 
-  return nums.find(function (num) {
-    return num > 10
-  })
+  return nums.find(num => num > 10)
 }
 
 function findFirstNumberLessThan10() {
@@ -14,9 +12,7 @@ function findFirstNumberLessThan10() {
 
 
   //TODO: Use items.find to return the first item in the array with a quantity of 1
-  return nums.find(function (num) {
-    return num < 10
-  })
+  return nums.find(num => num < 10)
 }
 
 
@@ -29,12 +25,10 @@ function findFirstItemWithQuantityOne() {
   ]
 
   //TODO: Use items.find to return the first item in the array with a quantity of 1
-  return items.find(function (item) {
-    if (item.quantity === 1) {
+  return items.find((item) => {
+    if (item.quantity === 1) 
       return true
-    } else {
-      return false
-    }
+     else return false
   })
 }
 
@@ -42,9 +36,7 @@ function findIndexTom() {
   const names = ['bob', 'jane', 'tom', 'fred']
 
   //TODO: Use names.findIndex to return the index of 'tom' in the array
-  return names.findIndex(function (name) {
-    return name === "tom"
-  })
+  return names.findIndex(name => name === "tom")
 }
 
 function findIndexLemon() {
@@ -56,12 +48,11 @@ function findIndexLemon() {
   ]
 
   //TODO: Use items.findIndex to return the index of the item 'lemon' in the array
-  return items.findIndex(function (name) {
-    if (name.item === "lemon") {
+  return items.findIndex((name) => {
+    if (name.item === "lemon") 
       return true
-    } else {
+     else 
       return false
-    }
   })
 }
 
@@ -69,18 +60,14 @@ function allOver100() {
   const nums = [13, 16, 99, 101, 2001, 198, 10]
 
   //TODO: Use nums.filter to return an array containing every item nums that is over 100
-  return nums.filter(function (num) {
-    return num > 100
-  })
+  return nums.filter(num => num > 100)
 }
 
 function startsWithM() {
   const names = ['Matt', 'Bob', 'Marie', 'Fred', 'Mike', 'Charles']
 
   //TODO: Use names.filter to return an array containing every name starting with an 'M'
-  return names.filter(function (letter) {
-    return letter[0].includes("M")
-  })
+  return names.filter(letter => letter[0].includes("M"))
 }
 
 function horrorFilms() {
@@ -104,9 +91,7 @@ function horrorFilms() {
   ]
 
   //TODO: Use films.filter to return an array containing all horror films
-  return films.filter(function(film){
-    return film.genre === "Horror"
-  })
+  return films.filter(film => film.genre === "Horror")
 }
 
 function doubleEachNumber() {
@@ -121,34 +106,26 @@ function sumNumbers() {
 
   //TODO: Use nums.reduce to return the sum of all items in the array
 
-return nums.reduce(function(a, b){
-  return a + b 
-})
+  return nums.reduce((a, b) => a + b)
 }
 
 function findLargest() {
   const nums = [341, 120, 9121, 862]
 
   //TODO: Use nums.reduce to return the largest number in the array
-  return nums.reduce(function(a, b){
-    if (a > b) {
-      return a
-    } else {
-      return b
-    }
-  })
+  return nums.reduce((a, b) => (a > b) ? a : b)
 }
 
 module.exports = {
-  findFirstNumberGreaterThan10: findFirstNumberGreaterThan10,
-  findFirstNumberLessThan10: findFirstNumberLessThan10,
-  findFirstItemWithQuantityOne: findFirstItemWithQuantityOne,
-  findIndexTom: findIndexTom,
-  findIndexLemon: findIndexLemon,
-  allOver100: allOver100,
-  startsWithM: startsWithM,
-  horrorFilms: horrorFilms,
-  doubleEachNumber: doubleEachNumber,
-  sumNumbers: sumNumbers,
-  findLargest: findLargest
-}
+      findFirstNumberGreaterThan10: findFirstNumberGreaterThan10,
+      findFirstNumberLessThan10: findFirstNumberLessThan10,
+      findFirstItemWithQuantityOne: findFirstItemWithQuantityOne,
+      findIndexTom: findIndexTom,
+      findIndexLemon: findIndexLemon,
+      allOver100: allOver100,
+      startsWithM: startsWithM,
+      horrorFilms: horrorFilms,
+      doubleEachNumber: doubleEachNumber,
+      sumNumbers: sumNumbers,
+      findLargest: findLargest
+    }
